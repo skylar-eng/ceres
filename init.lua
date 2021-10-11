@@ -1,5 +1,5 @@
-minetest.clear_registered_biomes(),
-minetest.clear_registered_decorations(),
+minetest.clear_registered_biomes()
+minetest.clear_registered_decorations()
 
 minetest.register_biome({
     name = 'ceres',
@@ -19,7 +19,7 @@ minetest.register_biome({
 })
 
 set_physics_override({
-    gravity = 0.03
+    gravity = 0.03,
 })
 
 set_sky({
