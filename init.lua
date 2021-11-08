@@ -10,7 +10,7 @@ minetest.register_biome({
     depth_filler = 12,
     node_stone = 'default:stone',
     node_water_top = 'default:ice',
-    node_water = 'default:air',
+    node_water = 'default:ice',
     y_max = 1024,
     y_min = -1024,
     vertical_blend = 12,
@@ -80,4 +80,67 @@ player:set_sky({
     clouds = false,
 })
 
+player:set_stars({
+    visible = true,
+    count = 65535,
+})
+
+player:set_sun({
+    visible = true,
+    scale = 0.33,
+})
+
+player:set_moon({
+    visible = false,
+})
+
+player:override_day_night_ratio(0.5)
+
 end)
+
+
+
+
+minetest.register_ore({
+    ore_type       = "scatter",
+    ore            = "default:stone_with_tin",
+    wherein        = "default:gravel",
+    clust_scarcity = 7*7*7,
+    clust_num_ores = 8,
+    clust_size     = 3,
+    height_min     = -255,
+    height_max     = 255,
+ })
+
+ minetest.register_ore({
+    ore_type       = "scatter",
+    ore            = "default:stone_with_tin",
+    wherein        = "default:silver_sand",
+    clust_scarcity = 7*7*7,
+    clust_num_ores = 8,
+    clust_size     = 3,
+    height_min     = -255,
+    height_max     = 255,
+ })
+
+ minetest.register_ore({
+    ore_type       = "scatter",
+    ore            = "default:stone_with_mese",
+    wherein        = "default:gravel",
+    clust_scarcity = 8*8*9
+    clust_num_ores = 4
+    clust_size     = 3,
+    height_min     = -255,
+    height_max     = 255,
+ })
+
+ minetest.register_ore({
+    ore_type       = "scatter",
+    ore            = "default:stone_with_tin",
+    wherein        = "default:silver_sand",
+    clust_scarcity = 7*7*7,
+    clust_num_ores = 8,
+    clust_size     = 3,
+    height_min     = -255,
+    height_max     = 255,
+ })
